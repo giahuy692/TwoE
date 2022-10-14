@@ -1,0 +1,4 @@
+Đã cài react-router-dom
+Đã cài redux
+Đã cài react-redux
+Đã cài axios 
