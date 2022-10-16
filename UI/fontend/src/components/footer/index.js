@@ -5,7 +5,7 @@ import './style.css';
 export default function Footer() {
   return (
     <footer>
-      {/* <div className='gird'>
+      <div className='gird'>
         <div className='gird-row'>
           <div className='gird_column-2-4'>
             <h3 className='footer__heading'>About</h3>
@@ -55,7 +55,7 @@ export default function Footer() {
                 <a className='footer-item__link'><img src='—Pngtree—call icon_4419870.png' className='img_icon_sm'></img>Head office: 213 Bis Nam Ky Khoi Nghia, Ward 7, District 3.</a>
               </li>
               <li className='footer-item'>
-                <a className='footer-item__link'><img src='—Pngtree—mailbox logo picture_5461807.png' className='img_icon_sm'></img>Email: supportEnglishEdu@2e.com.vn</a>
+                <a className='footer-item__link'><img src='—Pngtree—mailbox logo picture_5461807.png' className='img_icon_sm'></img>Email: EnglishEdu@2e.com.vn</a>
               </li>
             </ul>
           </div>
@@ -80,7 +80,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-      </div> */}
+      </div>
 
     </footer>
   );

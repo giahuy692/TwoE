@@ -4,9 +4,10 @@ footer{
     background-color: white;
 
 }
-/* 
+
 .gird-row{
     float: none;
+    margin: 0 auto;
 }
 
 .footer__heading{
@@ -28,7 +29,7 @@ footer{
     background-color: white;
     text-align: center;
     float: left;
-    
+    margin: 0 auto;
 
 }
 
@@ -69,4 +70,4 @@ footer{
 
 .footer-item2__link:hover{
     color: red;
-} */
+}
