@@ -1,15 +1,16 @@
 import './App.css';
+import Footer from './components/footer/index';
+import Register from './components/register/index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          hello world
-        </p>
-      </header>
+    <div className='container'>
+      <Register />
+      <Footer />
     </div>
-  );
+      
+  ) 
+    
 }
 
 export default App;
