@@ -5,7 +5,7 @@ const { param } = require("../routes/auth");
 class UsersControllers {
   async getAllUser(req, res, next) {
     try {
-      const user = await User.find().count();
+      const user = await User.find();
       res.status(200).json(user);
     } catch (error) {
       res.status(500).json(error);

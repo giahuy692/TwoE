@@ -36,6 +36,10 @@ const Users = new mongoose.Schema(
         },
         age:{
             type: String,
+        },
+        active:{
+            type: Boolean,
+            default: false
         }
 
     }, 

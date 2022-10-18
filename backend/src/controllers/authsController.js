@@ -1,26 +1,77 @@
-const User = require("../models/UsersModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const jwtComponents = require("../config/conponents/jwt");
+const UsersModel = require("../models/UsersModel");
 
 let refreshTokens = [];
 class AuthsController {
   async register(req, res, next) {
     try {
+      //Lưu các giá trị từ req.body
+      const { username, password, name, email, pswRepeat } = req.body;
+
+      //tạo biến errors với kiểu giá trị là array
+      var errors = [];
+
+      //Check required fields
+      if (!username || !name || !email || !password || !pswRepeat) {
+        errors.push({
+          //thêm vào mảng errors với giá trị msg
+          msg: " Please fill in all fields",
+        });
+      }
+
+      //kiểm tra nhập lại pass các giống không?
+      if (password !== pswRepeat) {
+        //thêm vào mảng errors với giá trị msg
+        errors.push({
+          msg: "Passwords do not match",
+        });
+      }
+
+      //kiểm tra độ dài của pass đã nhập không được ít hơn 6 kí tự
+      if (password.length < 6) {
+        //thêm vào mảng errors với giá trị msg
+        errors.push({
+          //thêm vào mảng errors với giá trị msg
+          msg: "Password should be at least 6 characters",
+        });
+      }
+
+      if (errors.length > 0) {
+        return res.status(500).json(errors);
+      } else {
+        // validation passed
+        await UsersModel.findOne({ username: username }).then((user) => {
+          //User exists(kiểm tra sự tồn tại của user)
+          if (user) {
+            //thêm vào mảng errors với giá trị msg
+            errors.push({ msg: "Username is already register" });
+            return res.status(500).json(errors);
+          }
+        });
+      }
+
       const salt = await bcrypt.genSalt(10);
       const hashed = await bcrypt.hash(req.body.password, salt); // mã hóa mật khẩu
 
       //craete new user
-      const newUser = await new User({
+      const newUser = await new UsersModel({
         username: req.body.username,
         email: req.body.email,
         password: hashed,
         name: req.body.name,
-        age: req.body.age,
       });
 
       //save to DB
-      const user = await newUser.save();
+      const user = await newUser 
+        .save()
+        .then((user) => {
+          //lưu trữ mess vào flash để hiển thị lên client
+          res.status(200).json("You are now registerd a can login");
+          res.redirect("/auth/login");
+        })
+        .catch((err) => console.log(err));
       return res.status(200).json(user);
     } catch (error) {
       return res.status(500).json(error);
@@ -49,6 +100,12 @@ class AuthsController {
         const refreshToken = jwtComponents.generateRefreshToken(user);
         refreshTokens.push(refreshToken);
         res.cookie("refreshToken", refreshToken, {
+          httpOnly: true,
+          secure: false,
+          // path:'/',
+          sameSite: "strict",
+        });
+        res.cookie("idUser", user._id, {
           httpOnly: true,
           secure: false,
           // path:'/',
