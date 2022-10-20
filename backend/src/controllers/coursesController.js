@@ -2,9 +2,9 @@
 const Course = require("../models/CoursesModel");
 
 class courseControllers {
-    GetAllCourse (req, res, next) {
+    async GetAllCourse (req, res, next) {
         try {
-            const couser = Course.find();
+            const couser = await Course.find();
             return res.status(200).json(couser);
             
         } catch (error) {
