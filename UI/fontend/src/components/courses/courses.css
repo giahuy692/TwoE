@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: 'Baloo Tamma 2', cursive;
+}
+
+.library-header {
+    background: #1cb0f6;
+}
+
+.library-header .library-header-content {
+    max-width: 1128px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+/* .library-header-content {
+    display: flex;
+    justify-content: space-around;
+} */
+
+.library-header-content .right {
+    width: 35%;
+    float: right;
+    margin: 0 auto -10px auto;
+}
+
+.library-header-content .right img {
+    width: 100%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.home-img {
+    border-radius: 50%;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; */
+}
+
+.library-header-content .left {
+    width: 54%;
+    float: left;
+    padding-right: 30px;
+    padding-top: 40px;
+}
+
+.library-header-content .left h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 35px;
+    font-family: var(--font-family);
+    line-height: 1.3;
+    /* max-width: 410px; */
+}
+
+.library-header-content .left h2 {
+    font-size: 22px;
+    font-family: var(--font-family);
+    color: #fff;
+    line-height: 1.3;
+    margin: 30px 0px 0px;
+    /* max-width: 440px; */
+}
+
+.ui-button-longer {
+    width: 100%;
+    max-width: 323px;
+    height: 53px;
+    display: inline-block;
+    line-height: 53px;
+    font-size: 15px;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    border: 1px solid;
+    text-align: center;
+    border-bottom: 3px solid;
+}
+
+.link-register {
+    /* display: block; */
+    margin: auto;
+    background: #5ECE00;
+    color: var(--white);
+    text-transform: uppercase;
+    border-bottom-color: #5CAE00;
+    margin-top: 40px;
+    border: 0px;
+    border-bottom: 4px solid #65A20E;
+    height: 53px;
+    line-height: 55px;
+    border-radius: 18px;
+    font-family: var(--font-family);
+    max-width: 318px;
+}
+
+
+/* .clearfix::before,
+.clearfix::after {
+    display: table;
+    content: " ";
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+} */
+
+.clearfix {
+    display: block;
+    clear: both;
+}
+
+/* Home-cloud
+.home-cloud {
+    position: relative;
+}
+
+.home-cloud-bg {
+    background-image: url(./image/home-cloud-bg.png);
+    height: 160px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -130px;
+} */

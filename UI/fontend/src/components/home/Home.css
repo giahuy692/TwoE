@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black: #000;
+    --white: #fff;
+    --font-family: 'Baloo Tamma 2', cursive;
+}
+
+/* Home-top */
+.home-top-content {
+    background: linear-gradient(180deg, #1aa8f4, #0260D9);
+    padding-top: 50px;
+    padding-bottom: 160px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.home-top-content .home-welcome {
+    position: relative;
+    max-width: 384px;
+    margin: auto;
+}
+
+.home-top-content .home-welcome img {
+    width: 100%;
+}
+
+.home-top-content h6 {
+    display: block;
+    text-align: center;
+    color: var(--white);
+    font-size: 22px;
+    font-family: var(--font-family);
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.home-top-content h1 {
+    display: block;
+    margin: 20px auto 0px;
+    text-align: center;
+    font-family: var(--font-family);
+    text-transform: capitalize;
+    color: var(--white);
+    font-size: 32px;
+}
+
+.home-top-content .content {
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: var(--font-family);
+}
+
+.home-top-content a.link-register {
+    display: block;
+    margin: auto;
+    background: #5ECE00;
+    color: var(--white);
+    text-transform: uppercase;
+    border-bottom-color: #5CAE00;
+    margin-top: 40px;
+    border: 0px;
+    border-bottom: 4px solid #65A20E;
+    height: 53px;
+    line-height: 55px;
+    border-radius: 18px;
+    font-family: var(--font-family);
+    max-width: 318px;
+}
+
+.ui-button-longer {
+    width: 100%;
+    max-width: 323px;
+    height: 53px;
+    display: inline-block;
+    line-height: 53px;
+    font-size: 15px;
+    font-family: var(--font-family);
+    border-radius: 10px;
+    border: 1px solid;
+    text-align: center;
+    border-bottom: 3px solid;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-top-content a.link-premium {
+    display: block;
+    margin: auto;
+    background: #2B70C9;
+    color: var(--white);
+    text-transform: uppercase;
+    border: 0px;
+    border: 1px solid #1453A3;
+    margin-top: 15px;
+    height: 53px;
+    line-height: 55px;
+    border-radius: 18px;
+    font-family: var(--font-family);
+    max-width: 318px;
+    border-bottom: 4px solid #1453A3;
+}
+
+/* Home-cloud */
+.home-cloud {
+    position: relative;
+}
+
+.home-cloud-bg {
+    background-image: url(./image/home-cloud-bg.png);
+    height: 160px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -130px;
+}
