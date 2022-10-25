@@ -16,7 +16,7 @@ const Topics = new mongoose.Schema(
             ref: "Courses"
         },
         score: {
-            type:Int16Array,
+            type:mongoose.Schema.Types.Number,
         }
     },
     { 
