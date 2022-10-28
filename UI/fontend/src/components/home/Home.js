@@ -2,16 +2,16 @@ import React, { useEffect } from 'react'
 import img from './image/happy-kid.png';
 import './Home.css';
 import { Link, useNavigate } from 'react-router-dom';
-import jwt_decode from "jwt-decode";
+// import jwt_decode from "jwt-decode";
 import { getAllUsers } from '../../redux/apiRequest';
 import { createAxios } from '../../createInstance';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+// import axios from 'axios';
 import { loginSuccess } from '../../redux/authSlice';
 
 export default function Home() {
   const user = useSelector((state) => state.auth.login?.currentUser);
-  const userList = useSelector((state) => state.users.users?.allUsers);
+  // const userList = useSelector((state) => state.users.users?.allUsers);
   
   const dispatch = useDispatch();
   const navigate = useNavigate();
