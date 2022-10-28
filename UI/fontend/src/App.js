@@ -22,32 +22,6 @@ function App() {
           <Route path="/login" element={<Login />} exact />
         </Routes>
       </Router>
-      
-      {/* <Router>
-        <Navbar />
-
-        <Switch>
-          <Route path="/" component={Menu} exact>
-            <Menu />
-          </Route>
-          <Route path="/method" component={Method} exact>
-            <Method />
-          </Route>
-          <Route path="/courses" component={Courses} exact>
-            <Courses />
-          </Route>
-          <Route path="/contact" component={Contact} exact>
-            <Contact />
-          </Route>
-          <Route path="/login" component={Login} exact>
-            <Login />
-          </Route>
-        </Switch> */}
-
-      {/* <Footer /> */}
-      {/* </Router> */}
-
-
     </>
   );
 }
