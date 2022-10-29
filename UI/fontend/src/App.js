@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/navbar";
 import Login from "./components/login/index";
 import Register from "./components/register";
 // import Footer from "./components/footer/index";
+// import Dashboard from "./components/dashboard/index";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -24,32 +25,7 @@ function App() {
           <Route path="/register" element={<Register />} exact />
         </Routes>
       </Router>
-      
-      {/* <Router>
-        <Navbar />
-
-        <Switch>
-          <Route path="/" component={Menu} exact>
-            <Menu />
-          </Route>
-          <Route path="/method" component={Method} exact>
-            <Method />
-          </Route>
-          <Route path="/courses" component={Courses} exact>
-            <Courses />
-          </Route>
-          <Route path="/contact" component={Contact} exact>
-            <Contact />
-          </Route>
-          <Route path="/login" component={Login} exact>
-            <Login />
-          </Route>
-        </Switch> */}
-
-      {/* <Footer /> */}
-      {/* </Router> */}
-
-
+      {/* <Dashboard /> */}
     </>
   );
 }
