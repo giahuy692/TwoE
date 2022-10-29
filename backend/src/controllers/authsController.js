@@ -80,7 +80,7 @@ class AuthsController {
 
   async login(req, res, next) {
     try {
-      const user = await User.findOne({ username: req.body.username });
+      const user = await UsersModel.findOne({ username: req.body.username });
 
       if (!user) {
         return res.status(404).json("Wrong username");

@@ -11,7 +11,7 @@ import { loginSuccess } from '../../redux/authSlice';
 
 export default function Home() {
   const user = useSelector((state) => state.auth.login?.currentUser);
-  const userList = useSelector((state) => state.users.users?.allUsers);
+  // const userList = useSelector((state) => state.users.users?.allUsers);
   
   const dispatch = useDispatch();
   const navigate = useNavigate();
