@@ -10,8 +10,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loginSuccess } from '../../redux/authSlice';
 
 export default function Home() {
+<<<<<<< HEAD
+  const user = useSelector((state) => state.auth.login?.currentUser);
+  // const userList = useSelector((state) => state.users.users?.allUsers);
+  
+=======
   const user = useSelector((state) => state.auth.login.currentUser);
 
+>>>>>>> 4e37750a770f107e5b13706d82a259aa12e346c0
   const dispatch = useDispatch();
   const navigate = useNavigate();
   let axiosJWT = createAxios(user, dispatch, loginSuccess);

@@ -5,6 +5,7 @@ import Courses from './components/courses/Courses';
 import Contact from "./components/Contact";
 import Navbar from "./components/navbar/navbar";
 import Login from "./components/login/index";
+import Register from "./components/register";
 // import Footer from "./components/footer/index";
 // import Dashboard from "./components/dashboard/index";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/courses" element={<Courses />} exact />
           <Route path="/contact" element={<Contact />} exact />
           <Route path="/login" element={<Login />} exact />
+          <Route path="/register" element={<Register />} exact />
         </Routes>
       </Router>
       {/* <Dashboard /> */}

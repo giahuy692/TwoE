@@ -2,17 +2,17 @@ const express = require('express')
 const cors = require('cors')
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser')
-const app = express()
-const port = 3000
+const app = express();
+const port = 8000;
 const path = require('path');
 require('dotenv').config();
 
-const morgan = require('morgan')
+const morgan = require('morgan');
 
-const route = require('./routes')
+const route = require('./routes');
 
 //Init database
-const database = require('./config/database/index')
+const database = require('./config/database/index');
 database.connect();
 
 app.use(cors());
@@ -20,13 +20,13 @@ app.use(cookieParser());
 app.use(express.json());
 
 // body-parser
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 
 //morgan
-app.use(morgan('combined'))
+app.use(morgan('combined'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -34,5 +34,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 route(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`)
-})
+  console.log(`Example app listening on port http://localhost:${port}`);
+});

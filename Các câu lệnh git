@@ -63,3 +63,20 @@ git merge nhánh-chính
 // Push những thay đổi của nhánh đang dev sau khi hoàn thành task 
 git push -u origin tên-nhánh 
 
+---------------------------------------------------------
+// Quy trình làm việc tránh xung đột 
+ 
+ 1. Quay về nhánh chính master or ( main ) 
+ -> git checkout master (or main)
+
+ 2. Pull dữ liệu thì trên github về git-local  
+ -> git pull
+
+ 3. Quay về nhánh đang dev hoặc tạo nhánh mới để thực hiện tiếp công việc được giao
+ -> nếu quay lại nhánh đang dev để tiếp tiếp tục dev: git checkout nhánh-đang-dev
+ -> nếu tạo nhánh mới để thực hiện công việc mới được giao: git checkout -b tên-nhánh-mới
+
+ 4. tiến hành push thông tin mới từ git-local lên github
+ -> git add . (để push tất cả những thay đổi)
+ -> git commit -m "Nội dụng của bạn ở đây"
+ -> git push -u origin tên-nhánh-muốn-push-dữ-liệu
